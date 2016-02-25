@@ -1,16 +1,22 @@
 {
-  "name": "ng1-ng2",
-  "version": "1.0.0",
-  "description": "ng1 ng2",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Sebastian Rodriguez <sebasrodriguez@gmail.com>",
-  "license": "ISC",
-  "dependencies": {
-    "angular": "^1.5.0",
-    "angular-ui-router": "^0.2.18",
-    "jquery": "^2.2.1"
-  }
+    "name": "ng1-ng2",
+    "version": "1.0.0",
+    "description": "ng1 ng2",
+    "main": "index.js",
+    "author": "Sebastian Rodriguez <sebasrodriguez@gmail.com>",
+    "license": "ISC",
+    "scripts": {
+        "start": "http-server -a 0.0.0.0 -p 8080",
+        "typings": "typings",
+        "tsc": "tsc -p . -w"
+    },
+    "dependencies": {
+        "angular": "^1.5.0",
+        "angular-ui-router": "^0.2.18",
+        "jquery": "^2.2.1",
+        "systemjs": "^0.19.23"
+    },
+    "devDependencies": {
+        "typings": "^0.6.8"
+    }
 }

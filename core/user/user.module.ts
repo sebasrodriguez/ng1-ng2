@@ -1,4 +1,7 @@
-angular.module("app.user", [
+import UserService from "./services/user.service";
+import UserList from "./components/list/list";
+
+export default angular.module("app.user", [
     "ui.router"
 ]).config(function($stateProvider: any): void {
     $stateProvider.state("user", {
@@ -11,3 +14,7 @@ angular.module("app.user", [
         `
     });
 });
+
+angular.module("app.user")
+    .service("userService", UserService)
+    .directive("userList", UserList);

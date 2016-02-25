@@ -1,4 +1,4 @@
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <title>ng1 - ng2</title>
@@ -12,13 +12,17 @@
 <body>
     <div ui-view></div>
 
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/angular/angular.js"></script>
     <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
 
-    <script src="core/app.module.js"></script>
-    <script src="core/user/user.module.js"></script>
-    <script src="core/user/components/list/list.js"></script>
+    <script>
+        System.config({
+            packages: { "core": { defaultExtension: "js" } }
+        });
+        System.import("core/app.module");
+    </script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-class UserService {
+export default class UserService {
     public getUsers(): Array<any> {
         return [
             { name: "Sebastian" },
@@ -6,5 +6,3 @@ class UserService {
         ];
     }
 }
-
-angular.module("app.user").service("userService", UserService);

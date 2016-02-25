@@ -1,9 +1,13 @@
-class UserListDirective {
-    restrict = "E";
-    templateUrl = "core/user/components/list/list.html";
-    controller = UserListController;
-    controllerAs = "users";
-    bindToController = true;
+import UserService from "../services/user.service";
+
+export default function userListComponent() {
+    return {
+        restrict: "E",
+        templateUrl: "core/user/components/list/list.html",
+        controller: UserListController,
+        controllerAs: "users",
+        bindToController: true
+    };
 }
 
 class UserListController {
@@ -13,9 +17,3 @@ class UserListController {
         this.list = this.userService.getUsers();
     }
 }
-
-function directive() {
-    return new UserListDirective();
-}
-
-angular.module("app.user").directive("userList", directive);
