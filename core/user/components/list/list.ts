@@ -9,11 +9,8 @@ class UserListDirective {
 class UserListController {
     public list: any;
 
-    constructor() {
-        this.list = [
-            { name: "Sebastian" },
-            { name: "Francisco" }
-        ];
+    constructor(private userService: UserService) {
+        this.list = this.userService.getUsers();
     }
 }
 
