@@ -1,3 +1,4 @@
+import { UpgradeAdapter } from "angular2/upgrade";
 import userModule from "./user/user.module";
 
 export default angular.module("app", [
@@ -8,4 +9,5 @@ export default angular.module("app", [
     $stateProvider.state("home", { url: "/", template: "<div>home <a ui-sref='user'>go to user</a></div>" });
 });
 
-angular.bootstrap(document.documentElement, ["app"]);
+const upgradeAdapter = new UpgradeAdapter();
+upgradeAdapter.bootstrap(document.documentElement, ["app"]);
