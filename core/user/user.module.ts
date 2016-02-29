@@ -16,8 +16,9 @@ export default angular.module("app.user", [
         `
     });
 });
-
 angular.module("app.user")
     .service("userService", UserService)
     .directive("userList", UserList)
     .directive("userDetail", <angular.IDirectiveFactory>upgradeAdapter.downgradeNg2Component(UserDetailComponent));
+
+upgradeAdapter.upgradeNg1Provider("userService", { asToken: UserService });

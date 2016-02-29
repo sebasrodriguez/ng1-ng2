@@ -1,8 +1,13 @@
 export default class UserService {
+    private users: Array<any> = [
+        { name: "Sebastian" },
+        { name: "Francisco" }];
+
     public getUsers(): Array<any> {
-        return [
-            { name: "Sebastian" },
-            { name: "Francisco" }
-        ];
+        return this.users;
+    }
+
+    public addUser(user: any) {
+        this.users.push(user);
     }
 }

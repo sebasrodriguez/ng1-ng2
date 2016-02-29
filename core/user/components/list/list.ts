@@ -1,5 +1,4 @@
 import UserService from "../../services/user.service";
-import UserDetailComponent from "../detail/detail";
 
 export default function userListComponent() {
     return {
