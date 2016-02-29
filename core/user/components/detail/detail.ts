@@ -1,4 +1,5 @@
-import {Component, Inject} from "angular2/core";
+
+import {Component, Inject, Input} from "angular2/core";
 import UserService from "../../services/user.service";
 
 @Component({
@@ -7,7 +8,9 @@ import UserService from "../../services/user.service";
     styleUrls: ["core/user/components/detail/detail.css"]
 })
 export class UserDetailComponent {
-    constructor(private userService: UserService) {
+    @Input() user;
+    constructor(
+        private userService: UserService) {
     }
 
     public addUser(): void {

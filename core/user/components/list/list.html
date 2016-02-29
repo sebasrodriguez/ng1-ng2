@@ -1,7 +1,7 @@
 <div>
     List of Users
     <div ng-repeat="user in users.list">
-        {{user.name}}
+        <a href="" ng-click="users.select(user)">{{user.name}}</a>
     </div>
-    <user-detail></user-detail>
+    <user-detail ng-if="users.showDetail" [user]="{{ users.selectedUser }}"></user-detail>
 </div>
